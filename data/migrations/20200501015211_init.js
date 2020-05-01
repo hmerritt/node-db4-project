@@ -25,7 +25,7 @@ exports.up = function(knex) {
                     .references("id")
                     .inTable("recipes");
                 table.float("quantity").notNullable();
-            });
+            })
     )
 };
 
