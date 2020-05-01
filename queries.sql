@@ -15,3 +15,11 @@ ON [ingredients].id == [recipes_ingredients].ingredient_id
 JOIN [recipes]
 ON [recipes].id == [recipes_ingredients].recipe_id
 ORDER BY [ingredients].name ASC;
+
+-- List of all ingredients and quantities for a given recipe
+SELECT [ingredients].name as "ingredient", [recipes_ingredients].quantity
+FROM [ingredients]
+JOIN [recipes_ingredients]
+ON [ingredients].id == [recipes_ingredients].ingredient_id
+AND [recipes_ingredients].recipe_id == 1
+ORDER BY [ingredients].name ASC;
